@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JEEVAN DHARA - Blood Donation</title>
+
+   <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyhZEM1rUrgPSI3NOXMuGElulaF73Lum0otdp3UGAQKBhzdoL05FK3hgQK&s=10" alt="Jeevan Dhara Logo">
+       <span> JEEVAN DHARA</span>
+       <div class="search-box">
+            <input type="text" placeholder="Search">
+            <button>Search</button>
+        </div>
+    </div>
+</header>
+<section class="cutie">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#find">Donate plasma</a>
+        <a href="#banks">Donate Organs</a>
+        <a href="#eligibility">Why give Blood</a>
+       <a href="#register">Why Jeevan Dhara</a>
+        <a href="#campaign">News and Campaigns</a>
+        <a href="#faqs">Who you could Help</a>
+    </nav>
+    <marquee><a href="#myths">Benefits of Donating</marquee></a>
+</section>
+
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div>
+
+        <h1>Give Blood, Give Life</h1>
+
+        <p>
+            Connecting blood donors with people who need blood.
+        </p>
+
+        <a href="#find" class="btn">
+            Find Blood
+        </a>
+
+        <a href="#register" class="btn">
+            Register
+
+    </div>
+
+</section>
+
+
+<!-- WHO NEEDS BLOOD -->
+
+<section>
+
+    <h2 class="section-title">
+        Who Needs Blood?
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="card-icon">🚑</div>
+            <h3>Accident Patients</h3>
+            <p>
+                Accident victims may need urgent blood transfusion.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🏥</div>
+            <h3>Surgery Patients</h3>
+            <p>
+                Blood may be required during major surgeries.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">😭</div>
+            <h3>Mothers & Babies</h3>
+            <p>
+                Blood can be required during pregnancy and childbirth emergencies.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="card-icon">🩸</div>
+            <h3>Blood Disorders</h3>
+            <p>
+                Some patients require regular blood or blood-component support.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FIND COMPATIBLE BLOOD -->
+
+<section id="find">
+
+    <h2 class="section-title">
+        Find Compatible Blood
+    </h2>
+
+    <div class="form-box">
+
+        <label>
+            Patient Blood Group
+        </label>
+
+        <select id="patientBlood">
+            <option value="">Select Blood Group</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+        </select>
+
+<label>
+    Enter Your Location
+</label>
+
+<div class="location-box">
+
+    <input
+        type="text"
+        id="locationInput"
+        placeholder="Enter your location, e.g. Noida Sector 18"
+    >
+
+    <button type="button" id="useLocationBtn">
+        📍 Use My Location
+    </button>
+
+    <button type="button" id="searchLocationBtn">
+        Find Nearby
+    </button>
+
+</div>
+
+<p id="locationStatus"></p>
+
+<div id="hospitalResults"></div>
+
+<div id="donorResults"></div>
+        <select id="hospital">
+
+            <option value="">
+                Select Hospital
+            </option>
+
+            <option>
+                Indraprastha Apollo Hospital - New Delhi
+            </option>
+
+            <option>
+                BLK-Max Super Speciality Hospital - New Delhi
+            </option>
+
+            <option>
+                Fortis Hospital - Vasant Kunj
+            </option>
+
+            <option>
+                Yashoda Super Speciality Hospital - Kaushambi
+            </option>
+
+            <option>
+                Max Super Speciality Hospital - Vaishali
+            </option>
+
+            <option>
+                Max Super Speciality Hospital - Noida
+            </option>
+
+            <option>
+                Medanta - The Medicity - Gurugram
+            </option>
+
+            <option>
+                Artemis Hospital - Gurugram
+            </option>
+            <button type="searchdonar" id="searchdonarBtn">
+        Find Nearby
+    </button>
+
+        </select>
+
+    </div>
+
+</section>
+
+
+<!-- BLOOD BANKS -->
+
+<section id="banks">
+
+    <h2 class="section-title">
+        🏥 Nearby Blood Banks – NCR
+    </h2>
+
+    <div class="bank-search">
+
+        <label>
+            Search Blood Bank
+        </label>
+
+        <input
+            type="text"
+            id="bankSearch"
+            placeholder="Example: Delhi, Noida, Red Cross..."
+            onkeyup="filterBanks()"
+        >
+
+
+        <label>
+            Filter by City
+        </label>
+
+        <select id="cityFilter" onchange="filterBanks()">
+
+            <option value="all">
+                All NCR
+            </option>
+
+            <option value="Delhi">
+                Delhi
+            </option>
+
+            <option value="Noida">
+                Noida
+            </option>
+
+            <option value="Ghaziabad">
+                Ghaziabad / Loni
+            </option>
+
+            <option value="Bahadurgarh">
+                Bahadurgarh
+            </option>
+
+        </select>
+
+
+        <div class="note">
+
+            <strong>Important:</strong>
+            This section provides example blood-bank locations for the project.
+            Blood stock and availability can change, so users should confirm
+            availability with the blood centre before travelling.
+
+        </div>
+
+    </div>
+
+
+    <div class="bank-grid" id="bankGrid"></div>
+
+</section>
+
+
+<!-- ELIGIBILITY -->
+
+<section id="eligibility">
+
+    <h2 class="section-title">
+        🩸 Donor Eligibility Checker
+    </h2>
+
+    <div class="form-box">
+
+        <label>
+            Age
+        </label>
+
+        <input
+            type="number"
+            id="age"
+            placeholder="Enter your age"
+        >
+
+
+        <label>
+            Gender
+        </label>
+
+        <select id="gender">
+
+            <option value="">
+                Select
+            </option>
+
+            <option value="male">
+                Male
+            </option>
+
+            <option value="female">
+                Female
+            </option>
+
+        </select>
+
+
+        <label>
+            Weight (kg)
+        </label>
+
+        <input
+            type="number"
+            id="weight"
+            placeholder="Example: 55"
+        >
+
+
+        <label>
+            Are you currently sick or feeling unwell?
+        </label>
+
+        <select id="sick">
+
+            <option value="">
+                Select
+            </option>
+
+            <option value="no">
+                No
+            </option>
+
+            <option value="yes">
+                Yes
+            </option>
+
+        </select>
+
+
+        <label>
+            Have you had malaria recently?
+        </label>
+
+        <select id="malaria">
+
+            <option value="">
+                Select
+            </option>
+
+            <option value="no">
+                No
+            </option>
+
+            <option value="yes">
+                Yes
+            </option>
+
+        </select>
+
+
+        <div id="malariaDateBox" style="display:none;">
+
+            <label>
+                Date of full recovery from malaria
+            </label>
+
+            <input
+                type="date"
+                id="malariaDate"
+            >
+
+        </div>
+
+
+        <label>
+            Have you had typhoid recently?
+        </label>
+
+        <select id="typhoid">
+
+            <option value="">
+                Select
+            </option>
+
+            <option value="no">
+                No
+            </option>
+
+            <option value="yes">
+                Yes
+            </option>
+
+        </select>
+
+
+        <div id="typhoidDateBox" style="display:none;">
+
+            <label>
+                Date of full recovery from typhoid
+            </label>
+
+            <input
+                type="date"
+                id="typhoidDate"
+            >
+
+        </div>
+
+
+        <label>
+            Have you had dengue or chikungunya recently?
+        </label>
+
+        <select id="dengue">
+
+            <option value="">
+                Select
+            </option>
+
+            <option value="no">
+                No
+            </option>
+
+            <option value="yes">
+                Yes
+            </option>
+
+        </select>
+
+
+        <div id="dengueDateBox" style="display:none;">
+
+            <label>
+                Date of full recovery
+            </label>
+
+            <input
+                type="date"
+                id="dengueDate"
+            >
+
+        </div>
+
+
+        <label>
+            When was your last blood donation?
+        </label>
+
+        <input
+            type="date"
+            id="lastDonation"
+        >
+
+        <p class="small-text">
+            Leave blank if you have never donated blood.
+        </p>
+
+
+        <button onclick="checkEligibility()">
+            Check Eligibility
+        </button>
+
+
+        <div id="eligibilityResult"></div>
+
+    </div>
+
+</section>
+
+
+<!-- REGISTER DONOR -->
+
+<section id="register">
+
+    <h2 class="section-title">
+        ❤️ Register as a Donor
+    </h2>
+
+    <div class="form-box">
+
+        <label>
+            Full Name
+        </label>
+
+        <input
+            type="text"
+            id="donorName"
+            placeholder="Enter your name"
+        >
+
+
+        <label>
+            Blood Group
+        </label>
+
+        <select id="donorBlood">
+
+            <option value="">
+                Select
+            </option>
+
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+
+        </select>
+
+
+        <label>
+            City
+        </label>
+
+        <input
+            type="text"
+            id="donorCity"
+            placeholder="Example: Meerut"
+        >
+
+
+        <label>
+            Last Donation Date
+        </label>
+
+        <input
+            type="date"
+            id="donorLastDonation"
+        >
+
+
+        <button onclick="registerDonor()">
+            Register Donor
+        </button>
+
+
+        <div id="registerResult"></div>
+
+    </div>
+
+</section>
+
+
+<!-- HEALTH CARD -->
+
+<section>
+
+    <h2 class="section-title">
+        🪪 Donor Health Card
+    </h2>
+
+    <div class="form-box">
+
+        <label>
+            Enter Donor Name
+        </label>
+
+        <input
+            type="text"
+            id="cardName"
+            placeholder="Example: Rahul"
+        >
+
+        <button onclick="generateCard()">
+            Generate Health Card
+        </button>
+
+        <div id="healthCard"></div>
+
+    </div>
+
+</section>
+
+
+<!-- MYTHS -->
+
+<section>
+
+    <h2 class="section-title">
+        ❌ Myths vs ✅ Facts
+    </h2>
+
+    <div class="cards">
+
+        <div class="card myth">
+
+            <h3>
+                Myth
+            </h3>
+
+            <p>
+                Donating blood makes you permanently weak.
+            </p>
+
+            <br>
+
+            <strong>
+                Fact:
+            </strong>
+
+            <p>
+                A healthy eligible donor can normally recover after donation.
+            </p>
+
+        </div>
+
+
+        <div class="card myth">
+
+            <h3>
+                Myth
+            </h3>
+
+            <p>
+                Blood donation is only useful during accidents.
+            </p>
+
+            <br>
+
+            <strong>
+                Fact:
+            </strong>
+
+            <p>
+                Blood is also required for surgeries, childbirth emergencies
+                and blood disorders.
+            </p>
+
+        </div>
+
+
+        <div class="card myth">
+
+            <h3>
+                Myth
+            </h3>
+
+            <p>
+                All blood groups can receive blood from anyone.
+            </p>
+
+            <br>
+
+            <strong>
+                Fact:
+            </strong>
+
+            <p>
+                Blood groups have compatibility rules. Matching is important
+                before transfusion.
+            </p>
+
+        </div>
+
+
+        <div class="card myth">
+
+            <h3>
+                Myth
+            </h3>
+
+            <p>
+                Having recovered from malaria means you can never donate.
+            </p>
+
+            <br>
+
+            <strong>
+                Fact:
+            </strong>
+
+            <p>
+                Indian blood-centre guidance includes a deferral period after
+                full recovery rather than treating every past malaria case as
+                a permanent ban.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>
+        🩸 JEEVAN DHARA
+    </h2>
+
+    <p>
+        Every drop can make a difference.
+    </p>
+
+    <p>
+        ©️ 2026 <span class="footer-red">Jeevan Dhara</span>
+    </p>
+
+</footer>
+
+
+<script>
+    /* -----------------------------
+    LOCATION
+----------------------------- */
+
+const locationInput = document.getElementById("locationInput");
+const searchLocationBtn = document.getElementById("searchLocationBtn");
+const useLocationBtn = document.getElementById("useLocationBtn");
+
+const locationStatus = document.getElementById("locationStatus");
+const hospitalResults = document.getElementById("hospitalResults");
+const donorResults = document.getElementById("donorResults");
+
+
+/* -----------------------------
+   USE MY CURRENT LOCATION
+----------------------------- */
+
+useLocationBtn.addEventListener("click", () => {
+
+    if (!navigator.geolocation) {
+        locationStatus.textContent =
+            "Geolocation is not supported by your browser.";
+        return;
+    }
+
+    locationStatus.textContent = "Getting your location...";
+
+    navigator.geolocation.getCurrentPosition(
+
+        async (position) => {
+
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+
+            locationStatus.textContent =
+                "Location found. Finding nearby hospitals...";
+
+            await findNearbyHospitals(lat, lon);
+        },
+
+        () => {
+            locationStatus.textContent =
+                "Please allow location access or enter your location manually.";
+        },
+
+        {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+        }
+    );
+});
+
+
+/* ============================
+   BLOOD COMPATIBILITY
+============================ */
+
+const compatibility = {
+
+    "A+": ["A+", "A-", "O+", "O-"],
+
+    "A-": ["A-", "O-"],
+
+    "B+": ["B+", "B-", "O+", "O-"],
+
+    "B-": ["B-", "O-"],
+
+    "AB+": [
+        "A+",
+        "A-",
+        "B+",
+        "B-",
+        "AB+",
+        "AB-",
+        "O+",
+        "O-"
+    ],
+
+    "AB-": [
+        "A-",
+        "B-",
+        "AB-",
+        "O-"
+    ],
+
+    "O+": ["O+", "O-"],
+
+    "O-": ["O-"]
+
+};
+
+
+/* ============================
+   DEMO DONOR DATABASE
+============================ */
+
+let donors = [
+
+    {
+        name: "AFROZ",
+        blood: "O+",
+        city: "Meerut",
+        hospital: "Yashoda Super Speciality Hospital - Kaushambi",
+        lastDonation: "2026-01-10"
+    },
+
+    {
+        name: "ADITYA",
+        blood: "A+",
+        city: "Delhi",
+        hospital: "Indraprastha Apollo Hospital - New Delhi",
+        lastDonation: "2026-03-15"
+    },
+
+    {
+        name: "ANSHIKA",
+        blood: "B+",
+        city: "Noida",
+        hospital: "Max Super Speciality Hospital - Noida",
+        lastDonation: "2026-02-01"
+    },
+
+    {
+        name: "VEDANT",
+        blood: "O-",
+        city: "Gurugram",
+        hospital: "Medanta - The Medicity - Gurugram",
+        lastDonation: "2025-12-10"
+    },
+
+    {
+        name: "Riya",
+        blood: "AB+",
+        city: "Ghaziabad",
+        hospital: "Yashoda Super Speciality Hospital - Kaushambi",
+        lastDonation: "2026-04-01"
+    },
+
+    {
+        name: "VINIL",
+        blood: "A-",
+        city: "Delhi",
+        hospital: "BLK-Max Super Speciality Hospital - New Delhi",
+        lastDonation: "2026-02-20"
+    },
+
+    {
+        name: "MAHI",
+        blood: "B-",
+        city: "Gurugram",
+        hospital: "Artemis Hospital - Gurugram",
+        lastDonation: "2026-03-01"
+    },
+
+    {
+        name: "ADITI",
+        blood: "O+",
+        city: "Faridabad",
+        hospital: "Fortis Hospital - Vasant Kunj",
+        lastDonation: "2026-01-25"
+    },
+    {
+        name: "KANISHKA",
+        blood: "O+",
+        city: "Faridabad",
+        hospital: "Fortis Hospital - Vasant Kunj",
+        lastDonation: "2026-01-25"
+    }
+
+];
+
+
+/* ============================
+   FIND BLOOD
+============================ */
+
+function findBlood() {
+
+    let patientBlood =
+        document.getElementById("patientBlood").value;
+
+    let hospital =
+        document.getElementById("hospital").value;
+
+    let result =
+        document.getElementById("bloodResult");
+
+
+    if (patientBlood === "") {
+
+        result.innerHTML =
+            `<div class="result danger">
+                Please select the patient's blood group.
+            </div>`;
+
+        return;
+    }
+
+
+    let compatibleGroups =
+        compatibility[patientBlood];
+
+
+    let matchingDonors =
+        donors.filter(function(donor) {
+
+            return compatibleGroups.includes(donor.blood);
+
+        });
+
+
+    let html = `
+
+        <div class="result">
+
+            <h3>Blood Search Result</h3>
+
+            <p>
+                <strong>Patient Blood Group:</strong>
+                ${patientBlood}
+            </p>
+
+            <p>
+                <strong>Compatible Groups:</strong>
+                ${compatibleGroups.join(", ")}
+            </p>
+
+    `;
+
+
+    if (hospital !== "") {
+
+        html += `
+
+            <p>
+                <strong>Selected Hospital:</strong>
+                ${hospital}
+            </p>
+
+        `;
+
+    }
+
+
+    if (matchingDonors.length > 0) {
+
+        html += `
+            <h4 style="margin-top:15px;">
+                Compatible Demo Donors
+            </h4>
+        `;
+
+
+        matchingDonors.forEach(function(donor) {
+
+            html += `
+
+                <div class="blood-card" style="margin-top:10px;">
+
+                    <span class="blood-type">
+                        ${donor.blood}
+                    </span>
+
+                    <p>
+                        <strong>${donor.name}</strong>
+                    </p>
+
+                    <p>
+                        📍 ${donor.city}
+                    </p>
+
+                    <p>
+                        🏥 ${donor.hospital}
+                    </p>
+
+                    <p>
+                        🩸 Last Donation:
+                        ${donor.lastDonation}
+                    </p>
+
+                </div>
+
+            `;
+
+        });
+
+    } else {
+
+        html += `
+
+            <p class="danger"
+               style="margin-top:15px;">
+
+                No matching demo donor found.
+
+            </p>
+
+        `;
+
+    }
+
+
+    html += `
+
+            <div class="note">
+
+                <strong>Demo Data:</strong>
+                The donor records shown here are sample data for this
+                student project. They are not live blood-stock records.
+
+            </div>
+
+        </div>
+
+    `;
+
+
+    result.innerHTML = html;
+
+}
+
+
+/* ============================
+   BLOOD BANK DATABASE
+============================ */
+
+const bloodBanks = [
+
+    {
+        name: "Indian Red Cross Society Blood Bank",
+        city: "Delhi",
+        location: "1 Red Cross Road, New Delhi",
+        phone: "+91-11-23716441"
+    },
+
+    {
+        name: "VMMC & Safdarjung Hospital Blood Centre",
+        city: "Delhi",
+        location: "Safdarjung Hospital, Ring Road, New Delhi",
+        phone: "011-26168470"
+    },
+
+    {
+        name: "AIIMS Blood Bank",
+        city: "Delhi",
+        location: "Ansari Nagar, Ring Road, New Delhi",
+        phone: "011-26588700"
+    },
+
+    {
+        name: "Rotary Blood Bank",
+        city: "Delhi",
+        location: "56-57 Tughlakabad Institutional Area, New Delhi",
+        phone: "011-29054066"
+    },
+
+    {
+        name: "Blood Bank, Dr RML Hospital",
+        city: "Delhi",
+        location: "Baba Kharak Singh Marg, New Delhi",
+        phone: "011-23348200"
+    },
+
+    {
+        name: "Blood Bank, LNJP Hospital",
+        city: "Delhi",
+        location: "MAMC Campus, New Delhi",
+        phone: "011-23233809"
+    },
+
+    {
+        name: "Max Super Speciality Hospital Blood Bank",
+        city: "Delhi",
+        location: "Shalimar Bagh, New Delhi",
+        phone: "011-66422222"
+    },
+
+    {
+        name: "Fortis Flt. Lt. Rajan Dhall Hospital Blood Bank",
+        city: "Delhi",
+        location: "Vasant Kunj, New Delhi",
+        phone: "011-42776222"
+    },
+
+    {
+        name: "Freedom Blood Bank",
+        city: "Delhi",
+        location: "Yamuna Vihar, Delhi",
+        phone: "+91-9896660032"
+    },
+
+    {
+        name: "Pitampura Regional Blood Transfusion Centre",
+        city: "Delhi",
+        location: "B-299 Outer Ring Road, Pitampura, Delhi",
+        phone: "011-44791001"
+    },
+
+    {
+        name: "Lions Blood Bank",
+        city: "Delhi",
+        location: "Shalimar Bagh, Delhi",
+        phone: "+91-9717897500"
+    },
+
+    {
+        name: "White Cross Blood Bank",
+        city: "Delhi",
+        location: "East of Kailash, New Delhi",
+        phone: "011-49055916"
+    },
+
+    {
+        name: "Blood Bank Organisation",
+        city: "Delhi",
+        location: "Old Rajinder Nagar, New Delhi",
+        phone: "011-25711055"
+    },
+
+    {
+        name: "Blood Bank Kailash Hospital",
+        city: "Noida",
+        location: "Sector 27, Noida, Uttar Pradesh",
+        phone: "0120-2444444"
+    },
+
+    {
+        name: "Bharat Sewa Charitable Blood Centre",
+        city: "Ghaziabad",
+        location: "Loni Border, Ghaziabad",
+        phone: "011-71861978"
+    },
+
+    {
+        name: "Blood Centre Ashirwad Blood Bank",
+        city: "Bahadurgarh",
+        location: "Rohtak-Delhi Road, Bahadurgarh",
+        phone: "+91-9990215521"
+    }
+
+];
+
+
+/* ============================
+   DISPLAY BLOOD BANKS
+============================ */
+
+function displayBanks(list) {
+
+    let grid =
+        document.getElementById("bankGrid");
+
+    grid.innerHTML = "";
+
+
+    if (list.length === 0) {
+
+        grid.innerHTML = `
+
+            <div class="result">
+
+                <p class="danger">
+                    No blood bank found.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    list.forEach(function(bank) {
+
+        let mapLink =
+            "https://www.google.com/maps/search/?api=1&query="
+            + encodeURIComponent(
+                bank.name + " " + bank.location
+            );
+
+
+        grid.innerHTML += `
+
+            <div class="bank-card">
+
+                <h3>
+                    🩸 ${bank.name}
+                </h3>
+
+                <span class="city-tag">
+                    ${bank.city}
+                </span>
+
+                <p class="bank-location">
+                    📍 ${bank.location}
+                </p>
+
+                <p class="bank-phone">
+                    📞 ${bank.phone}
+                </p>
+
+                <a
+                    href="${mapLink}"
+                    target="_blank"
+                    class="map-btn"
+                >
+                    📍 Open in Maps
+                </a>
+
+            </div>
+
+        `;
+
+    });
+
+}
+
+
+/* ============================
+   FILTER BLOOD BANKS
+============================ */
+
+function filterBanks() {
+
+    let search =
+        document
+        .getElementById("bankSearch")
+        .value
+        .toLowerCase();
+
+
+    let city =
+        document
+        .getElementById("cityFilter")
+        .value;
+
+
+    let filtered =
+        bloodBanks.filter(function(bank) {
+
+            let matchesSearch =
+                bank.name.toLowerCase().includes(search) ||
+                bank.location.toLowerCase().includes(search) ||
+                bank.city.toLowerCase().includes(search);
+
+
+            let matchesCity =
+                city === "all" ||
+                bank.city === city;
+
+
+            return matchesSearch && matchesCity;
+
+        });
+
+
+    displayBanks(filtered);
+
+}
+
+
+/* Show banks when page opens */
+
+displayBanks(bloodBanks);
+
+
+/* ============================
+   DATE DIFFERENCE
+============================ */
+
+function daysBetween(date1, date2) {
+
+    let first =
+        new Date(date1);
+
+    let second =
+        new Date(date2);
+
+    let difference =
+        second - first;
+
+    return Math.floor(
+        difference / (1000 * 60 * 60 * 24)
+    );
+
+}
+
+
+/* ============================
+   SHOW DISEASE DATE BOXES
+============================ */
+
+document
+.getElementById("malaria")
+.addEventListener("change", function() {
+
+    document.getElementById("malariaDateBox").style.display =
+        this.value === "yes"
+        ? "block"
+        : "none";
+
+});
+
+
+document
+.getElementById("typhoid")
+.addEventListener("change", function() {
+
+    document.getElementById("typhoidDateBox").style.display =
+        this.value === "yes"
+        ? "block"
+        : "none";
+
+});
+
+
+document
+.getElementById("dengue")
+.addEventListener("change", function() {
+
+    document.getElementById("dengueDateBox").style.display =
+        this.value === "yes"
+        ? "block"
+        : "none";
+
+});
+
+
+/* ============================
+   ELIGIBILITY CHECKER
+============================ */
+
+function checkEligibility() {
+
+    let age =
+        Number(document.getElementById("age").value);
+
+    let gender =
+        document.getElementById("gender").value;
+
+    let weight =
+        Number(document.getElementById("weight").value);
+
+    let sick =
+        document.getElementById("sick").value;
+
+    let malaria =
+        document.getElementById("malaria").value;
+
+    let malariaDate =
+        document.getElementById("malariaDate").value;
+
+    let typhoid =
+        document.getElementById("typhoid").value;
+
+    let typhoidDate =
+        document.getElementById("typhoidDate").value;
+
+    let dengue =
+        document.getElementById("dengue").value;
+
+    let dengueDate =
+        document.getElementById("dengueDate").value;
+
+    let lastDonation =
+        document.getElementById("lastDonation").value;
+
+    let result =
+        document.getElementById("eligibilityResult");
+
+
+    /* BASIC EMPTY CHECK */
+
+    if (
+        !age ||
+        !gender ||
+        !weight ||
+        !sick ||
+        !malaria ||
+        !typhoid ||
+        !dengue
+    ) {
+
+        result.innerHTML = `
+
+            <div class="result danger">
+
+                Please complete all required fields.
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    /* AGE */
+
+    if (age < 18) {
+
+        result.innerHTML = `
+
+            <div class="result danger">
+
+                ❌ You are below the minimum donor age of 18.
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    if (age > 65) {
+
+        result.innerHTML = `
+
+            <div class="result">
+
+                ⚠️ Age is above the basic range used in this
+                project. Please consult the blood centre directly.
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    /* WEIGHT */
+
+    if (weight < 45) {
+
+        result.innerHTML = `
+
+            <div class="result danger">
+
+                ❌ Minimum weight check failed.
+                The basic project rule is 45 kg.
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    /* CURRENT SICKNESS */
+
+    if (sick === "yes") {
+
+        result.innerHTML = `
+
+            <div class="result danger">
+
+                ❌ Donation should be deferred because you
+                are currently feeling unwell.
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    let today =
+        new Date().toISOString().split("T")[0];
+
+
+    /* MALARIA */
+
+    if (malaria === "yes") {
+
+        if (!malariaDate) {
+
+            result.innerHTML = `
+
+                <div class="result danger">
+
+                    Please enter your malaria recovery date.
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+
+        let days =
+            daysBetween(malariaDate, today);
+
+
+        if (days < 90) {
+
+            result.innerHTML = `
+
+                <div class="result danger">
+
+                    ❌ Malaria recovery was less than
+                    3 months ago.
+
+                    <br><br>
+
+                    Donation should be deferred until the
+                    applicable recovery period is completed.
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+    }
+
+
+    /* TYPHOID */
+
+    if (typhoid === "yes") {
+
+        if (!typhoidDate) {
+
+            result.innerHTML = `
+
+                <div class="result danger">
+
+                    Please enter your typhoid recovery date.
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+
+        let days =
+            daysBetween(typhoidDate, today);
+
+
+        if (days < 365) {
+
+            result.innerHTML = `
+
+                <div class="result danger">
+
+                    ❌ The entered typhoid recovery date
+                    is within the project's 12-month deferral period.
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+    }
+
+
+    /* DENGUE / CHIKUNGUNYA */
+
+    if (dengue === "yes") {
+
+        if (!dengueDate) {
+
+            result.innerHTML = `
+
+                <div class="result danger">
+
+                    Please enter the recovery date.
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+
+        let days =
+            daysBetween(dengueDate, today);
+
+
+        if (days < 180) {
+
+            result.innerHTML = `
+
+                <div class="result danger">
+
+                    ❌ The entered recovery date is within
+                    the 6-month deferral period.
+
+                </div>
+
+            `;
+
+            return;
+        }
+
+    }
+
+
+    /* LAST DONATION */
+
+    if (lastDonation !== "") {
+
+        let days =
+            daysBetween(lastDonation, today);
+
+
+        let requiredGap;
+
+
+        if (gender === "male") {
+
+            requiredGap = 90;
+
+        } else {
+
+            requiredGap = 120;
+
+        }
+
+
+        if (days < requiredGap) {
+
+            let remaining =
+                requiredGap - days;
+
+
+            result.innerHTML = `
+
+                <div class="result danger">
+
+                    ❌ You need to wait approximately
+                    ${remaining} more day(s).
+
+                    <br><br>
+
+                    Required whole-blood donation interval:
+
+                    <strong>
+                        ${requiredGap} days
+                    </strong>
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+    }
+
+
+    /* SUCCESS */
+
+    result.innerHTML = `
+
+        <div class="result">
+
+            <p class="success">
+
+                ✅ You may be eligible based on the
+                information entered.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                Your final eligibility must be checked by
+                qualified blood-centre staff before donation.
+
+            </p>
+
+            <br>
+
+            <p>
+
+                🩸 Stay hydrated and follow the instructions
+                given by the blood centre.
+
+            </p>
+
+        </div>
+
+    `;
+
+}
+
+
+/* ============================
+   REGISTER DONOR
+============================ */
+
+function registerDonor() {
+
+    let name =
+        document.getElementById("donorName").value;
+
+    let blood =
+        document.getElementById("donorBlood").value;
+
+    let city =
+        document.getElementById("donorCity").value;
+
+    let lastDonation =
+        document.getElementById("donorLastDonation").value;
+
+
+    let result =
+        document.getElementById("registerResult");
+
+
+    if (
+        name === "" ||
+        blood === "" ||
+        city === ""
+    ) {
+
+        result.innerHTML = `
+
+            <div class="result danger">
+
+                Please fill all required fields.
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    donors.push({
+
+        name: name,
+
+        blood: blood,
+
+        city: city,
+
+        hospital: "NCR Registered Donor",
+
+        lastDonation:
+            lastDonation || "No previous donation"
+
+    });
+
+
+    result.innerHTML = `
+
+        <div class="result">
+
+            <p class="success">
+
+                ✅ Donor registered successfully!
+
+            </p>
+
+            <p>
+                <strong>Name:</strong> ${name}
+            </p>
+
+            <p>
+                <strong>Blood Group:</strong> ${blood}
+            </p>
+
+            <p>
+                <strong>City:</strong> ${city}
+            </p>
+
+        </div>
+
+    `;
+
+
+    document.getElementById("donorName").value = "";
+
+    document.getElementById("donorBlood").value = "";
+
+    document.getElementById("donorCity").value = "";
+
+    document.getElementById("donorLastDonation").value = "";
+
+}
+
+
+/* ============================
+   HEALTH CARD
+============================ */
+
+function generateCard() {
+
+    let searchName =
+        document
+        .getElementById("cardName")
+        .value
+        .toLowerCase();
+
+
+    let card =
+        document.getElementById("healthCard");
+
+
+    let donor =
+        donors.find(function(d) {
+
+            return d.name.toLowerCase() === searchName;
+
+        });
+
+
+    if (!donor) {
+
+        card.innerHTML = `
+
+            <div class="result danger">
+
+                Donor not found.
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    card.innerHTML = `
+
+        <div class="result">
+
+            <h3>
+                🪪 Donor Health Card
+            </h3>
+
+            <hr style="margin:10px 0;">
+
+            <p>
+                <strong>Name:</strong>
+                ${donor.name}
+            </p>
+
+            <p>
+                <strong>Blood Group:</strong>
+                ${donor.blood}
+            </p>
+
+            <p>
+                <strong>City:</strong>
+                ${donor.city}
+            </p>
+
+            <p>
+                <strong>Last Donation:</strong>
+                ${donor.lastDonation}
+            </p>
+
+            <p>
+                <strong>Status:</strong>
+                Registered Donor
+            </p>
+
+        </div>
+
+    `;
+
+}
+
+
+/* ============================
+   AI-STYLE RECOMMENDATION
+============================ */
+
+function AIRecommendation(bloodGroup) {
+
+    if (!compatibility[bloodGroup]) {
+
+        return "Please select a valid blood group.";
+
+    }
+
+
+    return `
+        Compatible blood groups for ${bloodGroup} are:
+        ${compatibility[bloodGroup].join(", ")}
+    `;
+
+}
+
+
+</script>
+
+
+</body>
+</html>

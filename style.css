@@ -1,0 +1,416 @@
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: white;
+            color: black;
+            line-height: 1.6;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding:15px 0;
+        }
+        .logo img {
+            height: 50px;
+            width: 50px;
+            object-fit: contain;
+        }
+        .logo span {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 25px;
+            gap: 8px;
+            height: 40px;
+            width: 250px;
+            overflow: hidden;
+            margin-top:0;
+        }
+        .search-box input {
+            padding: 0px 15px;
+            border: none;
+            outline: none;
+            width: 100px;
+            font-size: 15px;
+        }
+        .search-box button {
+            border: none;
+            background: white;
+            font-size: 15px;
+            padding:8px 12px;
+            cursor: pointer;
+        }
+
+        header {
+            background: darkred;
+            color: white;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .cutie {
+            background: rgb(152, 13, 13);
+            color: white;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            min-height: 430px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(rgba(120,0,0,0.7), rgba(120,0,0,0.7)),
+                url("https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=1400&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background: white;
+            color: #b30000;
+            padding: 12px 22px;
+            border: none;
+            border-radius: 7px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background: #eee;
+        }
+
+        section {
+            padding: 55px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #b30000;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #b30000;
+            margin-bottom: 10px;
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .form-box {
+            background: white;
+            max-width: 900px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-top: 7px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            border: none;
+            background: #b30000;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #8f0000;
+        }
+
+        .result {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #fff4f4;
+            border-left: 5px solid #b30000;
+        }
+
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+
+        .danger {
+            color: #b30000;
+            font-weight: bold;
+        }
+
+        .info {
+            color: #555;
+        }
+
+        .blood-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .blood-type {
+            display: inline-block;
+            background: #b30000;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* BLOOD BANK SECTION */
+
+        .bank-search {
+            max-width: 900px;
+            margin: 0 auto 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .bank-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .bank-card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 5px solid #b30000;
+        }
+
+        .bank-card h3 {
+            color: #b30000;
+            margin-bottom: 10px;
+        }
+
+        .bank-location {
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .bank-phone {
+            margin: 8px 0;
+        }
+
+        .map-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 9px 14px;
+            background: #b30000;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .map-btn:hover {
+            background: #8f0000;
+        }
+
+        .city-tag {
+            display: inline-block;
+            background: #eee;
+            padding: 4px 9px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .note {
+            background: #fff8df;
+            border-left: 5px solid #e0a800;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 6px;
+        }
+
+        .myth {
+            border-left: 5px solid #b30000;
+            margin-bottom: 15px;
+        }
+
+        .myth strong {
+            color: #b30000;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .footer-red {
+            color: #ff4444;
+        }
+
+        .small-text {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+        }
+
+        @media(max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            section {
+                padding: 40px 5%;
+            }
+            .location-box {
+    margin-top: 15px;
+}
+
+.location-box input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.location-box button {
+    padding: 10px 15px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    background: darkred;
+    color: white;
+    cursor: pointer;
+}
+
+.location-box button:hover {
+    background: #8b0000;
+}
+
+#locationStatus {
+    margin-top: 10px;
+}
+
+#hospitalResults,
+#donorResults {
+    margin-top: 20px;
+}
+
+.hospital {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: white;
+}
+
+.donor {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: white;
+}
+        }
