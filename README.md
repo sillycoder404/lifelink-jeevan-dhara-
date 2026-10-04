@@ -15,4 +15,4 @@ HTML, CSS, JavaScript
 This is a student project . Donor and blood bank data is demo data, not live blood stock.
 
 ## Made by
-ABUSALEH AFROZ , and my Frnd Aditya Yadav
+ABUSALEH AFROZ , and Aditya Yadav.
